@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>NFT preview card component | Frontend Mentor</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- WEBSITE TITLE - sr only -->
+    <header class="website-title">
+      <h1>NFT Preview Card Component</h1>
+    </header>
+
+    <main>
+      <!-- CARD -->
+      <section class="card">
+        <picture class="cyan-tint">
+          <img
+            class="hero-image"
+            src="./images/image-equilibrium.jpg"
+            alt="A glass cube standing on one of it's corners with light reflecting off of the cube."
+          />
+
+          <img
+            class="hero-image-hover-icon"
+            src="./images/icon-view.svg"
+            alt=""
+          />
+        </picture>
+        <h2 class="text-preset-1">Equilibrium #3429</h2>
+        <p class="text-preset-2 description">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+        <!-- DETAILS -->
+        <div class="card__details">
+          <figure>
+            <img src="./images/icon-ethereum.svg" alt="Ethereum icon" /><span
+              class="text-preset-3--semibold"
+              >0.041 ETH</span
+            >
+          </figure>
+          <figure>
+            <img src="./images/icon-clock.svg" alt="Analog clock" /><span
+              class="text-preset-3--regular"
+              >3 days left</span
+            >
+          </figure>
+        </div>
+        <!-- CREATOR NAME -->
+        <div class="card__creator-name">
+          <picture>
+            <img
+              class="card__creator-picture"
+              src="./images/image-avatar.png"
+              alt="Profile picture of creator"
+            />
+          </picture>
+
+          <p class="text-preset-3--regular">
+            Creation of <a href="#" target="_blank">Jules Wyvern</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Albert Kuczkowski</a>.
+    </footer>
+  </body>
+</html>
