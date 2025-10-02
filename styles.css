@@ -114,10 +114,10 @@ ol {
 
 main {
     align-items: center;
-    display: flex;
-    justify-content: center;
     background-color: var(--blue--950);
+    display: flex;
     height: 100vh;
+    justify-content: center;
 }
 /* || WEBSITE TITLE - sr only || */
 .website-title {
@@ -136,24 +136,30 @@ main {
     max-width: 19.444em;
 }
 
+.hero-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
 .hero-image {
     border-radius: 0.444em;
-    /* v change opacity for hover/active states v */
-    /* opacity: 0.4;  */
     object-fit: cover;
 }
 
-.cyan-tint {
-    background-color: var(--cyan--400);
-    border-radius: 0.544em;
+.overlay {
+  background-color: var(--cyan--400);
+  border-radius: 0.544em;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .hero-image-hover-icon {
-    /* v change display back during hover/active states v */
-    display: none; 
-    justify-self: center;
-    margin-block-start: max(-60%, -175px);
     object-fit: contain;
+    opacity: 0;
     position: absolute;
 }
 
@@ -193,8 +199,8 @@ main {
 
 /* || CREATOR-NAME || */
 .card__creator-name {
-    border-top: 1px var(--blue--800) solid;
     align-items: center;
+    border-top: 0.056em var(--blue--800) solid;
     display: flex;
     padding-block-start: 1.361em;
 }
@@ -205,7 +211,7 @@ main {
 
 .card__creator-name picture {
     border: 0.056em solid var(--white);
-    border-radius: 50px;
+    border-radius: 1em;
     margin-inline-end: 0.889em;
 }
 
@@ -216,4 +222,41 @@ main {
 .card__creator-name a {
     color: var(--white);
     margin-inline-start:  0.444em;
+}
+
+/* |||| FOCUS/HOVER/ACTIVE STATES |||| */
+.hero-container:hover,
+.hero-container:focus,
+.hero-container:active,
+.hero-container:hover .hero-image-hover-icon,
+.hero-container:focus .hero-image-hover-icon,
+.hero-container:active .hero-image-hover-icon,
+.card h2:hover,
+.card h2:focus,
+.card h2:active,
+.card__creator-name a:hover,
+.card__creator-name a:focus,
+.card__creator-name a:active {
+    cursor: pointer;
+}
+
+.hero-container:hover .overlay,
+.hero-container:focus .overlay,
+.hero-container:active .overlay {
+    opacity: 0.5;
+}
+
+.hero-container:hover .hero-image-hover-icon,
+.hero-container:focus .hero-image-hover-icon,
+.hero-container:active .hero-image-hover-icon {
+    opacity: 1;
+}
+
+.card h2:hover,
+.card h2:focus,
+.card h2:active,
+.card__creator-name a:hover,
+.card__creator-name a:focus,
+.card__creator-name a:active {
+    color: var(--cyan--400);
 }
