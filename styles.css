@@ -202,7 +202,7 @@ main {
     align-items: center;
     border-top: 0.056em var(--blue--800) solid;
     display: flex;
-    padding-block-start: 1.361em;
+    padding: 0.6em 0 0.761em;
 }
 
 .card__creator-picture {
@@ -258,5 +258,18 @@ main {
 .card__creator-name a:hover,
 .card__creator-name a:focus,
 .card__creator-name a:active {
+    color: var(--cyan--400);
+}
+
+/* |||| ATTRIBUTION |||| */
+.attribution {
+    background-color: var(--blue--950);
+    color: var(--blue--500);
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+.attribution a {
     color: var(--cyan--400);
 }
