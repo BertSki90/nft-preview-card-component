@@ -16,8 +16,6 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -151,11 +149,9 @@ I want to be more consistant in including the width, height and loading properti
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Github - [@BertSki90](https://github.com/BertSki90)
+- Frontend Mentor - [@BertSki90](https://www.frontendmentor.io/profile/BertSki90)
+- X - [@BertSki90](https://x.com/BertSki90)
 
 ## Acknowledgments
 
