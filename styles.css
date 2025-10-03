@@ -23,10 +23,6 @@
     padding: 0;
 }
 
-html {
-    font-size: 18px;
-}
-
 img,
 picture,
 video {
@@ -67,11 +63,11 @@ ol {
 
     /* || FONT SIZES || */
     /* --text--lg: 22px; */
-    --text--lg: 1.222em;
+    --text--lg: 1.222rem;
     /* --text--md: 18px; */
-    --text--md: 1em;
+    --text--md: 1rem;
     /* --text--sm: 16px; */
-    --text--sm: 0.889em;
+    --text--sm: 0.889rem;
 }
 
 /* |||| TEXT PRESET |||| */
@@ -101,7 +97,7 @@ ol {
 
 .text-preset-3--semibold,
 .text-preset-3--regular {
-    font-size: var(--text__sm);
+    font-size: var(--text--sm);
 }
 
 .text-preset-1,
@@ -111,6 +107,10 @@ ol {
 }
 
 /* |||| GENERAL |||| */
+
+html {
+    font-size: 18px;
+}
 
 main {
     align-items: center;
