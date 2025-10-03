@@ -67,7 +67,7 @@ ol {
     /* --text--md: 18px; */
     --text--md: 1rem;
     /* --text--sm: 16px; */
-    --text--sm: 0.889rem;
+    --text--sm: 0.789rem;
 }
 
 /* |||| TEXT PRESET |||| */
@@ -221,7 +221,7 @@ main {
 
 .card__creator-name a {
     color: var(--white);
-    margin-inline-start:  0.444em;
+    margin-inline-start:  0.244em;
 }
 
 /* |||| FOCUS/HOVER/ACTIVE STATES |||| */
