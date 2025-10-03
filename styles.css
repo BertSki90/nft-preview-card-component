@@ -67,7 +67,8 @@ ol {
     /* --text--md: 18px; */
     --text--md: 1rem;
     /* --text--sm: 16px; */
-    --text--sm: 0.789rem;
+    /* --text--sm: 0.889rem; */
+    --text--sm: 0.8rem;
 }
 
 /* |||| TEXT PRESET |||| */
