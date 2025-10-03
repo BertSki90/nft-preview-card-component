@@ -23,7 +23,7 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 ### The challenge
 
 Estimated Time: 8hrs
-Actual Time: 6:52hrs + 1hrs
+Actual Time: 8:21hrs + 1hrs
 
 Users should be able to:
 
@@ -44,8 +44,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github @BertSki90](https://github.com/BertSki90/nft-preview-card-component)
+- Live Site URL: [Github @BertSki90](https://bertski90.github.io/nft-preview-card-component/)
 
 ## My process
 
@@ -54,52 +54,100 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Overlay is new to me. I did a lot of trial and error and reading before I got the overlay working properly. I had the wrong approach to overlays.
 
-To see how you can add code snippets, see below:
+Below I have provided the code with additional comments that are not in my source code:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<picture class="hero-container">
+  <img
+    class="hero-image"
+    src="./images/image-equilibrium.jpg"
+    alt="A glass cube standing on one of it's corners with light reflecting off of the cube."
+  />
+
+  <div class="overlay"></div>
+
+  <img class="hero-image-hover-icon" src="./images/icon-view.svg" alt="" />
+</picture>
 ```
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.hero-container {
+  /* |||| v align-items, display, and justify-content centers the elements inseid of the container v |||| */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  /* |||| ^^^^ |||| */
+  /* |||| v position prevents the children from overflowing the container v |||| */
+  position: relative;
+  /* |||| ^^^^ |||| */
+}
+
+.hero-image {
+  border-radius: 0.444em;
+  object-fit: cover;
+}
+
+.overlay {
+  background-color: var(--cyan--400);
+  border-radius: 0.544em;
+  /* |||| v height, and width fills the entire container v |||| */
+  height: 100%;
+  /* || v opacity set to not visible = 0 v || */
+  opacity: 0;
+  /* || ^^^^ || */
+  /* || v position places .overlay over .hero-image v || */
+  position: absolute;
+  /* || ^^^^ || */
+  width: 100%;
+  /* |||| ^^^^ |||| */
+}
+
+.hero-image-hover-icon {
+  /* |||| v object-fit keeps original size, no resizing v |||| */
+  object-fit: contain;
+  /* |||| ^^^^ |||| */
+  /* |||| v opacity set to not visible = 0 v |||| */
+  opacity: 0;
+  /* |||| ^^^^ |||| */
+  /* |||| v position places .hero-image-hover-icon senter of container v |||| */
+  position: absolute;
+  /* |||| ^^^^ |||| */
+}
+
+.hero-container:hover .overlay,
+.hero-container:focus .overlay,
+.hero-container:active .overlay {
+  /* |||| v makes .overlay partially visible = inbetween 0-1 v |||| */
+  opacity: 0.5;
+}
+
+.hero-container:hover .hero-image-hover-icon,
+.hero-container:focus .hero-image-hover-icon,
+.hero-container:active .hero-image-hover-icon {
+  /* |||| v makes .hero-image-hover-icon visible = 1 v |||| */
+  opacity: 1;
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Learning about overlays was great. Creating a container with an img.hero-image, div.overlay, and img.hero-image-hover-icon inside and having the img.hero-image cover the full container while hiding the other two classes. div.overlay becomes semi-transparent with cyan background color and img.hero-image-hover-icon becomes visible when cursor hovers over it.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I am getting more comfortable working with margin/padding-inline/block-start/end proprties and rem, em, and ch units.
+
+I want to implement max-inline-size to my CSS.
+
+I want to be more consistant in including the width, height and loading properties for images within the HTML.
 
 ### Useful resources
 
 - [dev.to](https://dev.to/ellen_dev/two-ways-to-achieve-an-image-colour-overlay-with-css-eio) - Helpful article to create an overlay.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
@@ -113,6 +161,4 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 Github - [@nakoyawilson](https://github.com/nakoyawilson/nft-preview-card-component/tree/main) - Insights on how to better use overlay. Fixed glitches I was having on the hover states, thank you!
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I would like to thank Frontend Mentor and FreeCodeCamp to giving me access to their resources and community which are crucial to my learning to code!
