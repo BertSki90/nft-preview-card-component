@@ -21,7 +21,7 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 ### The challenge
 
 Estimated Time: 8hrs
-Actual Time: 9:35hrs + 1hrs
+Actual Time: 11:30hrs
 
 Users should be able to:
 
