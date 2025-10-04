@@ -1,17 +1,17 @@
 /* |||| FONT FACE |||| */
 @font-face {
     font-family: "Outfit SemiBold";
-    src: url('./design/fonts/static/Outfit-SemiBold.ttf') format("woff2");
+    src: url('./design/fonts/static/Outfit-SemiBold.ttf') format("truetype");
 }
 
 @font-face {
     font-family: "Outfit Light";
-    src: url('./design/fonts/static/Outfit-Light.ttf') format("woff2");
+    src: url('./design/fonts/static/Outfit-Light.ttf') format("truetype");
 }
 
 @font-face {
     font-family: "Outfit Regular";
-    src: url("./design/fonts/static/Outfit-Regular.ttf") format("woff2");
+    src: url("./design/fonts/static/Outfit-Regular.ttf") format("truetype");
 }
 
 /* |||| RESET |||| */
@@ -67,7 +67,6 @@ ol {
     /* --text--md: 18px; */
     --text--md: 1rem;
     /* --text--sm: 16px; */
-    /* --text--sm: 0.889rem; */
     --text--sm: 0.87rem;
 }
 
@@ -75,15 +74,15 @@ ol {
 /* || FONT-FAMILY || */
 .text-preset-1,
 .text-preset-3--semibold {
-    font-family: "Outfit SemiBold";
+    font-family: "Outfit SemiBold", Arial, Helvetica, sans-serif;
 }
 
 .text-preset-2 {
-    font-family: "Outfit Light";
+    font-family: "Outfit Light", Arial, Helvetica, sans-serif;
 }
 
 .text-preset-3--regular {
-    font-family: "Outfit Regular";
+    font-family: "Outfit Regular", Arial, Helvetica, sans-serif;
 }
 
 /* || FONT-SIZE & LINE-HEIGHT || */
